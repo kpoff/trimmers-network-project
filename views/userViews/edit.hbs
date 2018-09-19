@@ -1,0 +1,22 @@
+{{theUser.firstName}}
+
+<form action="/profile/update/{{theUser._id}}" method="POST">
+
+<label for="">First Name</label>
+<input type="text" name="firstname" value="{{theUser.firstname}}">
+
+<label for="">Last Name</label>
+<input type="text" name="lastname" value="{{theUser.lastname}}">
+
+<label for="">Email</label>
+<input type="text" name="email" value="{{theUser.email}}">
+
+<button>Submit</button>
+
+</form>
+
+<div>
+<a href="/profile/photo/{{theUser._id}}"
+<button>Add or Change Your Profile Photo</button>
+</a>
+</div>

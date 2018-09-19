@@ -1,0 +1,13 @@
+<h2>Add or Change Your Profile Photo</h2>
+
+<h2>Current Profile Picture</h2>
+<div>
+<img src="{{theUser.imgPath}}" alt="">
+</div>
+<form action="/profile/photo/{{theUser._id}}" method="post" enctype="multipart/form-data">
+
+  <label>Profile Photo</label>
+  <input type="file" name="photo" value="{{theUser.photo}}">
+
+  <input type="submit" value="SAVE">
+</form>
