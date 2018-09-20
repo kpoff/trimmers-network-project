@@ -29,3 +29,18 @@ User.create(users, (err) => {
 //   console.log(`Created ${jobs.length} jobs`)
 //   mongoose.connection.close()
 // });
+
+// const mongoose = require('mongoose');
+// const Message = require('../models/Message');
+
+// const dbName = 'trimmers_network';
+// mongoose.connect(`mongodb://localhost/${dbName}`);
+
+// const messages = 
+// [{"message":"helloworld"}]
+
+// Message.create(messages, (err) => {
+//   if (err) { throw(err) }
+//   console.log(`Created ${messages.length} messages`)
+//   mongoose.connection.close()
+// });
