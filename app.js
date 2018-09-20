@@ -20,7 +20,7 @@ const User = require('./models/User')
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/trimmers_network', {useNewUrlParser: true})
+  .connect('process.env.MONGODB_URI', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
