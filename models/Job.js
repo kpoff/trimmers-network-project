@@ -11,7 +11,7 @@ const jobSchema = new Schema({
   accommodations: {type: String, required: true},
   travelInfo: {type: String, required: true},
   notes: {type: String},
-  postedBy: [{user_id: { type: Schema.Types.ObjectId, ref: "User"}}]
+  postedBy: [{type: Schema.Types.ObjectId, ref: "User"}]
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });

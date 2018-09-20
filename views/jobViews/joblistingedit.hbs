@@ -1,0 +1,29 @@
+<form action="/profile/joblistings/update/{{theJob._id}}" method="POST">
+
+<label for="">Job Title</label>
+<input type="text" name="jobtitle" value="{{theJob.jobTitle}}">
+
+<label for="">Number of Workers Needed</label>
+<input type="number" name="numberworkers" value="{{theJob.numberOfTrimmers}}">
+
+<label for="">Duration of Job</label>
+<input type="text" name="duration" value="{{theJob.duration}}">
+
+<label for="">Location</label>
+<input type="text" name="location" value="{{theJob.location}}">
+
+<label for="">Pay Rate</label>
+<input type="text" name="payrate" value="{{theJob.payRate}}">
+
+<label for="">Accommodations Description</label>
+<input type="text" name="accommodations" value="{{theJob.accommodations}}">
+
+<label for="">Travel Reimbursement</label>
+<input type="text" name="travelinfo" value="{{theJob.travelInfo}}">
+
+<label for="">Additional Information</label>
+<input type="text" name="notes" value="{{theJob.notes}}">
+
+<button>Submit</button>
+
+</form>

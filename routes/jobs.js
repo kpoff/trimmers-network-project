@@ -1,7 +1,9 @@
 const express      = require('express');
 const router       = express.Router();
 const Job        = require('../models/Job')
+const User        = require('../models/User')
 const ensureLogin  = require("connect-ensure-login");
+const Message     = require('../models/Message')
 
 
 /* GET home page */
@@ -27,8 +29,6 @@ router.get('/jobs/new', (req, res, next)=>{
 
 router.post('/jobs/create', (req, res, next)=>{
 
-  console.log("this is the info for req body--------------- ", req.body)
-
   Job.create({
     jobTitle: req.body.title,
     numberOfTrimmers: req.body.numberworkers,
@@ -41,10 +41,28 @@ router.post('/jobs/create', (req, res, next)=>{
     postedBy: req.user._id
   })
   .then((response)=>{
-    res.redirect('/jobs')
+    User.findByIdAndUpdate(req.user._id, {
+    $push: {jobListings: response._id}
+    })
+    .then((response)=>{
+      res.redirect('/jobs')
+    })
+    .catch((err)=>{
+      next(err);
+    })
   })
   .catch((err)=>{
     next(err);
+  })
+});
+
+router.get('/jobs/:id', (req, res, next)=>{
+  Job.findById(req.params.id).populate('postedBy')
+  .then((theJob)=>{
+      res.render('jobViews/detail', {theJob: theJob})
+  })
+  .catch((err)=>{
+      next(err);
   })
 });
 

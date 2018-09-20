@@ -8,12 +8,14 @@ const userSchema = new Schema({
   email: {type: String, required: true},
   role: {type: String, enum: ['Farmer', 'Trimmer'], required: true},
   firstName: {type: String, required: true},
-  lastName: {type: String},
+  lastName: {type: String, required: true},
   imgName: {type: String},
   imgPath: {type: String},
+  jobListings: [{type: Schema.Types.ObjectId, ref: "Job"}],
+  messages: [{type: Schema.Types.ObjectId, ref: "Message"}],
   vouchedBy: [{ type: Schema.Types.ObjectId, ref: "User"}],
-  compliments: [{user_id: { type: Schema.Types.ObjectId, ref: "User"}}],
-  reviews: [{user_id: { type: Schema.Types.ObjectId, ref: "User"}}]
+  compliments: [{ type: Schema.Types.ObjectId, ref: "User"}],
+  reviews: [{ type: Schema.Types.ObjectId, ref: "User"}]
 }, {
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });

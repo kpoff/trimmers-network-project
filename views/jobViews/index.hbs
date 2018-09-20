@@ -1,23 +1,24 @@
 <div>List of Jobs</div>
 
-{{#each theJobs}}
-
-  <p>Job Title: {{this.jobTitle}}</p>
-  <p>Number of Workers Needed: {{this.numberOfTrimmers}}</p>
-  <p>Duration of Job: {{this.duration}}</p>
-  <p>Location: {{this.location}}</p>
-  <p>Pay Rate: {{this.payRate}}</p>
-  <p>Accommodations Description: {{this.accommodations}}</p>
-  <p>Travel Reimbursement: {{this.travelInfo}}</p>
-  <p>Additional Information: {{this.notes}}</p>
-  <p>Posted By: {{this.user._id}}</p>
-
-{{/each}}
-
-
-
 <div>
 <a href="/jobs/new"
 <button>Add A New Job Listing</button>
 </a>
 </div>
+
+{{#each theJobs}}
+
+ <a href="/jobs/{{this._id}}">
+ <h3>Job Title: {{this.jobTitle}}</h3>
+ </a>
+  <p>Number of Workers Needed: {{this.numberOfTrimmers}}</p>
+  <p>Duration of Job: {{this.duration}}</p>
+  <p>Location: {{this.location}}</p>
+  <p>Pay Rate: {{this.payRate}}</p>
+
+{{/each}}
+
+
+
+
+

@@ -31,6 +31,8 @@ mongoose
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
+hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
+
 const app          = express();
 
 // Middleware Setup
@@ -46,6 +48,8 @@ app.use(require('node-sass-middleware')({
   dest: path.join(__dirname, 'public'),
   sourceMap: true
 }));
+
+
 
 app.use(session({
   secret: "our-passport-local-strategy-app",
@@ -108,6 +112,10 @@ app.use('/', profile);
 
 const jobs = require('./routes/jobs');
 app.use('/', jobs);
+
+const messages = require('./routes/messages');
+app.use('/', messages);
+
 
 
 module.exports = app;

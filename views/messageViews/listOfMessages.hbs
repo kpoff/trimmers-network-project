@@ -1,0 +1,21 @@
+{{#each theUser.messages}}
+
+<p>Date: {{dateFormat this.created_at "MM/DD/YYYY h:mma"}}</p>
+
+
+{{#each this.regardingJob}}
+<p>Job Reference:
+<a href="/jobs/{{this._id}}">
+{{this.jobTitle}}</p>
+</a> 
+ {{/each}}
+
+{{#each this.messageReceiver}}
+ <p>Sent To: {{this.username}}</p>
+{{/each}}
+
+ <p>Message: {{this.message}}</p>
+ <br>
+{{/each}}
+
+

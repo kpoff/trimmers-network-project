@@ -1,0 +1,20 @@
+<p>Job Title: {{theJob.jobTitle}}</p>
+
+<form action="/messages/sent/{{theJob._id}}" method="POST">
+
+<label for="">Send To</label>
+{{#each theJob.postedBy}}
+<input type="text" name="sendto" value="{{this.username}}" readonly><br>
+{{/each}}
+<br>
+<label for="">Message</label>
+<input type="text" name="message">
+
+{{#each theJob.postedBy}}
+<input type="hidden" name="postedby" value="{{this._id}}"><br>
+{{/each}}
+
+<input type="submit" value="SAVE">
+
+</form>
+
