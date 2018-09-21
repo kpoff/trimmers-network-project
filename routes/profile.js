@@ -81,13 +81,13 @@ router.get('/profile/joblistings/edit/:jobID', (req, res, next) => {
 
 router.post('/profile/joblistings/update/:jobID', (req, res, next)=>{
     Job.findByIdAndUpdate(req.params.jobID, {
-        jobTitle: req.body.jobtitle,
+        jobTitle: req.body.title,
         numberOfTrimmers: req.body.numberworkers,
         duration: req.body.duration,
         location: req.body.location,
         payRate: req.body.payrate,
         accommodations: req.body.accommodations,
-        travelInfo: req.body.travelinfo,
+        travelInfo: req.body.travel,
         notes: req.body.notes
     })
     .then((response)=>{
