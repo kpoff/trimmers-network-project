@@ -5,7 +5,10 @@ const ensureLogin = require("connect-ensure-login");
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  res.render('index');
+  let data = {
+    layout: false
+  }
+  res.render('index', data);
 });
 
 

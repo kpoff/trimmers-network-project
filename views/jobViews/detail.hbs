@@ -1,20 +1,33 @@
-  <p>Job Title: {{theJob.jobTitle}}</p>
-  <p>Number of Workers Needed: {{theJob.numberOfTrimmers}}</p>
-  <p>Duration of Job: {{theJob.duration}}</p>
-  <p>Location: {{theJob.location}}</p>
-  <p>Pay Rate: {{theJob.payRate}}</p>
-  <p>Accommodations Description: {{theJob.accommodations}}</p>
-  <p>Travel Reimbursement: {{theJob.travelInfo}}</p>
-  <p>Additional Information: {{theJob.notes}}</p>
+
+<fieldset>
+<legend>Job Title: {{theJob.jobTitle}}</legend>
+<p>
+Number of Workers Needed: {{theJob.numberOfTrimmers}}
+</p>
+<p>
+Duration of Job: {{theJob.duration}}
+</p> 
+<p>
+Location: {{theJob.location}}
+</p>
+<p>
+Pay Rate: {{theJob.payRate}}
+</p>
+<p>
+Accommodations Description: {{theJob.accommodations}}
+</p>
+<p>
+Travel Reimbursement: {{theJob.travelInfo}}
+</p>
+<p>
+Additional Information: {{theJob.notes}}
+</p>
 {{#each theJob.postedBy}}
  <p>Posted By: {{this.username}}</p>
 {{/each}}
-
-<div>
-<a href="/messages/send/{{theJob._id}}"
-<button>Send a Message to the Poster</button>
-</a>
-</div>
-
-
- 
+<div id="sendbutton">
+     <a href="/messages/send/{{theJob._id}}">
+    <button id="send">Send a Message to the Poster</button>
+    </a>
+ </div>
+</fieldset>

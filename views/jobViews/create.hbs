@@ -1,32 +1,42 @@
-<h1>Add A New Job Listing</h1>
+<h1 id="addnew">Add A New Job Listing</h1>
 
-<form action="/jobs/create" method="POST">
-
+<form action="/jobs/create" id= "makejob" method="POST">
+<fieldset>
+<legend>Job Information</legend>
+<p>
 <label for="">Job Title</label>
-<input type="text" name="title">
-
+<input type="text" name="title" id="title" />
+</p>
+<p>
 <label for="">Number of Workers Needed</label>
-<input type="number" name="numberworkers">
-
+<input type="number" name="numberworkers" id="numberworkers" />
+</p>
+<p>
 <label for="">Duration of Job</label>
-<input type="text" name="duration">
-
+<input type="text" name="duration" id="duration" />
+</p> 
+<p>
 <label for="">Location</label>
-<input type="text" name="location">
-
+<input type="text" name="location" id="location" />
+</p>
+<p>
 <label for="">Pay Rate</label>
-<input type="text" name="payrate">
-
+<input type="text" name="payrate" id="payrate" />
+</p>
+<p>
 <label for="">Accommodations Description</label>
-<input type="text" name="accommodations">
-
+<input type="text" name="accommodations" id="accommodations" />
+</p>
+<p>
 <label for="">Travel Reimbursement</label>
-<input type="text" name="travel">
-
+<input type="text" name="travel" id="travel" />
+</p>
+<p>
 <label for="">Additional Information</label>
-<input type="text" name="notes">
-
-<input type="submit" value="SAVE">
-
+<input type="text" name="notes" id="notes" />
+</p>
+</fieldset>
+<p><input type="submit" name="button" id="button" value="SAVE" />
+</p>
 </form>
 

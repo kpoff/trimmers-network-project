@@ -1,24 +1,24 @@
-<h1>Login</h1>
 
-<form action="/login" method="POST">
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" name="username">
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" name="password">
-  </div>
-
+  <form action="/login" method="POST">
+<fieldset id="signup">
+<legend>Login</legend>
+<p>
+<label for="">Username</label>
+<input type="text" name="username" placeholder="Your Username"/>
+</p>
+<p>
+<label for="">Password</label>
+<input type="password" name="password" placeholder="Your Password"/>
+</p>
+</fieldset>
+<p><input type="submit" name="button" id="loginbutton" value="Log In" />
+</p>
   {{#if message}}
-  <div>{{message}}</div>
+    <div class="error-message">{{ message }}</div>
   {{/if}}
-  
-  <div>
-    <input type="submit" value="Log In">
-  </div>
 
-   <p class="account-message">
-    Don't have an account? <a href="/signup">Sign up</a>
-  </p>
+  <div id="account-message">
+    Don't have an account?
+    <a href="/signup">Sign Up</a>
+  </div>
 </form>

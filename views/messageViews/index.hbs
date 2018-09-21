@@ -1,20 +1,21 @@
-<p>Job Title: {{theJob.jobTitle}}</p>
 
 <form action="/messages/sent/{{theJob._id}}" method="POST">
-
+<fieldset>
+<legend>Job Title: {{theJob.jobTitle}}</legend>
+<p>
 <label for="">Send To</label>
 {{#each theJob.postedBy}}
-<input type="text" name="sendto" value="{{this.username}}" readonly><br>
+<input type="text" name="sendto" value="{{this.username}}" readonly/>
 {{/each}}
-<br>
+</p>
+<p>
 <label for="">Message</label>
-<input type="text" name="message">
-
+<input type="text" name="message"/>
+</p>
 {{#each theJob.postedBy}}
-<input type="hidden" name="postedby" value="{{this._id}}"><br>
+<input type="hidden" name="postedby" value="{{this._id}}">
 {{/each}}
-
-<input type="submit" value="SAVE">
-
+<p><input type="submit" name="button" id="msgbutton" value="SEND" />
+</p>
+</fieldset>
 </form>
-

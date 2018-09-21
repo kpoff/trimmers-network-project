@@ -1,29 +1,41 @@
-<form action="/profile/joblistings/update/{{theJob._id}}" method="POST">
+<h1 id="editjobheading">Edit A Job Listing</h1>
 
+<form action="/profile/joblistings/update/{{theJob._id}}" id="editjob" method="POST">
+<fieldset>
+<legend>Job Information</legend>
+<p>
 <label for="">Job Title</label>
-<input type="text" name="jobtitle" value="{{theJob.jobTitle}}">
-
+<input type="text" name="title" id="title" value="{{theJob.jobTitle}}"/>
+</p>
+<p>
 <label for="">Number of Workers Needed</label>
-<input type="number" name="numberworkers" value="{{theJob.numberOfTrimmers}}">
-
+<input type="number" name="numberworkers" id="numberworkers" value="{{theJob.numberOfTrimmers}}" />
+</p>
+<p>
 <label for="">Duration of Job</label>
-<input type="text" name="duration" value="{{theJob.duration}}">
-
+<input type="text" name="duration" id="duration" value="{{theJob.duration}}" />
+</p> 
+<p>
 <label for="">Location</label>
-<input type="text" name="location" value="{{theJob.location}}">
-
+<input type="text" name="location" id="location" value="{{theJob.location}}"/>
+</p>
+<p>
 <label for="">Pay Rate</label>
-<input type="text" name="payrate" value="{{theJob.payRate}}">
-
+<input type="text" name="payrate" id="payrate" value="{{theJob.payRate}}"/>
+</p>
+<p>
 <label for="">Accommodations Description</label>
-<input type="text" name="accommodations" value="{{theJob.accommodations}}">
-
+<input type="text" name="accommodations" id="accommodations" value="{{theJob.accommodations}}"/>
+</p>
+<p>
 <label for="">Travel Reimbursement</label>
-<input type="text" name="travelinfo" value="{{theJob.travelInfo}}">
-
+<input type="text" name="travel" id="travel" value="{{theJob.travelInfo}}"/>
+</p>
+<p>
 <label for="">Additional Information</label>
-<input type="text" name="notes" value="{{theJob.notes}}">
-
-<button>Submit</button>
-
+<input type="text" name="notes" id="notes" value="{{theJob.notes}}"/>
+</p>
+</fieldset>
+<p><input type="submit" name="button" id="button" value="SAVE" />
+</p>
 </form>

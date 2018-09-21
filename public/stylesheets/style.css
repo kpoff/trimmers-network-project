@@ -1,8 +1,312 @@
 body {
-  padding: 50px;
-  font-family: Verdana, Geneva, sans-serif; }
+  padding: 20px;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #B6D4AE; }
 
 a {
   color: #00B7FF; }
+
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  background-color: #fffee0;
+  font-size: xx-large;
+  border-radius: 25px; }
+
+#navbar li {
+  text-align: center;
+  margin-bottom: 5vw; }
+
+#topli {
+  margin-top: 18vw; }
+
+#navbar li a {
+  display: block;
+  color: #333333;
+  padding: 8px 16px;
+  text-decoration: none; }
+
+#navbar li a:hover {
+  background-color: #555;
+  color: white; }
+
+#homepage-navbar {
+  display: flex;
+  flex-direction: row; }
+
+#pics {
+  position: relative;
+  z-index: 0; }
+
+#pic1 {
+  background: url("../images/trimmers.jpg");
+  position: relative;
+  width: 75vw;
+  height: 45vw;
+  border-radius: 25px; }
+
+#pic2 {
+  background: url("../images/bushes.jpg");
+  position: relative;
+  width: 75vw;
+  height: 45vw;
+  border-radius: 25px; }
+
+#layer1 {
+  background-color: rgba(248, 247, 216, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  z-index: 1; }
+
+#homepage-text {
+  position: absolute;
+  z-index: 2;
+  margin: 15vh;
+  font-size: x-large;
+  font-style: italic; }
+
+#body {
+  background-color: #B6D4AE; }
+
+#trimmers {
+  color: #333333;
+  font-size: 4vw; }
+
+.trimmers-heading img {
+  width: 5vw;
+  height: 12vh;
+  padding-left: 2vw; }
+
+.trimmers-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+#layout-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fffee0;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 25px;
+  margin-bottom: 5vh; }
+
+#layout-navbar li {
+  float: left;
+  margin-top: 1vh; }
+
+#layout-navbar li a {
+  display: block;
+  padding: 8px;
+  color: #333333;
+  text-decoration: none; }
+
+#layout-navbar li a:hover {
+  background-color: #555;
+  color: white;
+  border-radius: 25px; }
+
+fieldset {
+  border: 1px solid #555;
+  border-radius: 25px;
+  width: 60vw;
+  padding: 3px;
+  margin-left: 19vw;
+  margin-top: 10px; }
+
+fieldset legend {
+  background: #fffee0;
+  border-radius: 25px;
+  padding: 6px;
+  font-weight: bold; }
+
+#makejob label {
+  color: #333333;
+  font-weight: bold;
+  display: block;
+  width: 26vw;
+  float: left;
+  padding-left: 1vw; }
+
+label:after {
+  content: ": "; }
+
+#editjob label {
+  color: #333333;
+  font-weight: bold;
+  display: block;
+  width: 26vw;
+  float: left;
+  padding-left: 1vw; }
+
+label:after {
+  content: ": "; }
+
+#editprofile label {
+  color: #333333;
+  font-weight: bold;
+  display: block;
+  width: 15vw;
+  float: left;
+  padding-left: 1vw; }
+
+label:after {
+  content: ": "; }
+
+input {
+  width: 30vw; }
+
+#signup label {
+  color: #333333;
+  font-weight: bold;
+  display: block;
+  width: 15vw;
+  float: left;
+  padding-left: 1vw; }
+
+label:after {
+  content: ": "; }
+
+#button {
+  width: 10vw;
+  color: #333333;
+  margin-left: 60vw;
+  font-size: large; }
+
+#addnew {
+  margin-left: 20vw; }
+
+#viewyours {
+  margin-left: 20vw; }
+
+#edit {
+  width: 10vw;
+  color: #333333;
+  font-size: medium;
+  border-radius: 5px;
+  padding: 5px; }
+
+#delete {
+  width: 10vw;
+  color: #333333;
+  font-size: medium;
+  border-radius: 5px;
+  padding: 5px; }
+
+#editbuttons {
+  display: flex;
+  justify-content: center; }
+
+#editbutton {
+  margin-right: 3vw; }
+
+#editjobheading {
+  margin-left: 20vw; }
+
+#listofjobsheading {
+  margin-left: 20vw; }
+
+legend a {
+  display: block;
+  padding: 8px;
+  color: #333333;
+  text-decoration: none; }
+
+legend a:hover {
+  background-color: #555;
+  color: white;
+  border-radius: 25px; }
+
+#listofjobscontainer {
+  display: flex;
+  align-items: center; }
+
+fieldset p {
+  margin-left: 10px; }
+
+#addnewlink {
+  margin-left: 10vw;
+  width: 20vw;
+  border-radius: 5px; }
+
+#addnewlink button {
+  color: #333333;
+  font-size: large;
+  border-radius: 5px;
+  padding: 8px; }
+
+#sendbutton {
+  margin-left: 20vw;
+  width: 25vw;
+  border-radius: 5px; }
+
+#sendbutton button {
+  color: #333333;
+  font-size: large;
+  border-radius: 5px;
+  padding: 8px; }
+
+#msgbutton {
+  margin-left: 45vw;
+  width: 10vw;
+  border-radius: 5px;
+  font-size: large; }
+
+#buttonscontainer {
+  display: flex;
+  margin-top: 5vh;
+  margin-left: 26vw; }
+
+#buttonscontainer button {
+  margin-right: 3vw;
+  color: #333333;
+  font-size: large;
+  border-radius: 5px;
+  padding: 8px; }
+
+#signupbutton {
+  margin-left: 40vw;
+  color: #333333;
+  font-size: large;
+  border-radius: 5px;
+  padding: 8px;
+  width: 20vw; }
+
+#account-message {
+  margin-top: 5vh;
+  margin-left: 38vw; }
+
+#loginbutton {
+  margin-left: 43vw;
+  color: #333333;
+  font-size: large;
+  border-radius: 5px;
+  padding: 8px;
+  width: 13vw; }
+
+#createaccountbutton {
+  margin-left: 22vw;
+  color: #333333;
+  font-size: large;
+  border-radius: 5px;
+  padding: 8px;
+  width: 13vw; }
+
+#profilephoto button {
+  margin-left: 22vw;
+  color: #333333;
+  font-size: small;
+  border-radius: 5px;
+  padding: 4px;
+  width: 20vw; }
 
 /*# sourceMappingURL=style.css.map */

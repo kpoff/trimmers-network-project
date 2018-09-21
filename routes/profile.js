@@ -33,7 +33,9 @@ router.post('/profile/update/:userID', (req, res, next)=>{
     User.findByIdAndUpdate(req.params.userID, {
         firstName: req.body.firstname,
         lastName: req.body.lastname,
-        email: req.body.email
+        email: req.body.email,
+        role: req.body.role,
+        username: req.body.username
     })
     .then((response)=>{
         res.redirect('/profile')

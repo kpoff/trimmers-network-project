@@ -1,24 +1,42 @@
+<h1 id="viewyours">Jobs That You Posted</h1>
 
 {{#each theUser.jobListings}}
-  <p>Job Title: {{this.jobTitle}}</p>
-  <p>Number of Workers Needed: {{this.numberOfTrimmers}}</p>
-  <p>Duration of Job: {{this.duration}}</p>
-  <p>Location: {{this.location}}</p>
-  <p>Pay Rate: {{this.payRate}}</p>
-  <p>Accommodations Description: {{this.accommodations}}</p>
-  <p>Travel Reimbursement: {{this.travelInfo}}</p>
-  <p>Additional Information: {{this.notes}}</p>
-  <div>
-  <a href="/profile/joblistings/edit/{{this._id}}">
-  <button>Edit this job listing</button>
-</a>
+<fieldset>
+<legend>Job Title: {{this.jobTitle}}</legend>
+<p>
+Number of Workers Needed: {{this.numberOfTrimmers}}
+</p>
+<p>
+Duration of Job: {{this.duration}}
+</p> 
+<p>
+Location: {{this.location}}
+</p>
+<p>
+Pay Rate: {{this.payRate}}
+</p>
+<p>
+Accommodations Description: {{this.accommodations}}
+</p>
+<p>
+Travel Reimbursement: {{this.travelInfo}}
+</p>
+<p>
+Additional Information: {{this.notes}}
+</p>
+<div id="editbuttons">
+  <div id="editbutton">
+     <a href="/profile/joblistings/edit/{{this._id}}">
+    <button id="edit">Edit this job listing</button>
+    </a>
+ </div>
+  <div id="deletebutton">
+    <form action="/profile/joblistings/delete/{{this._id}}" method="POST">
+    <button id="delete">Delete this job listing</button>
 </div>
-  <form action="/profile/joblistings/delete/{{this._id}}" method="POST">
-    <button>Delete this job listing</button>
-  </form>
-
+</div>
+</fieldset>
 {{/each}}
-
 
 
 

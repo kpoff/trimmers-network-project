@@ -1,21 +1,31 @@
-<div>List of Jobs</div>
+<div id=listofjobscontainer>
+<h1 id="listofjobsheading">List of Available Jobs</h1>
 
-<div>
-<a href="/jobs/new"
+<div id=addnewlink>
+<a href="/jobs/new">
 <button>Add A New Job Listing</button>
 </a>
 </div>
+</div>
 
 {{#each theJobs}}
-
- <a href="/jobs/{{this._id}}">
- <h3>Job Title: {{this.jobTitle}}</h3>
- </a>
-  <p>Number of Workers Needed: {{this.numberOfTrimmers}}</p>
-  <p>Duration of Job: {{this.duration}}</p>
-  <p>Location: {{this.location}}</p>
-  <p>Pay Rate: {{this.payRate}}</p>
-
+<fieldset>
+<legend><a href="/jobs/{{this._id}}">
+Job Title: {{this.jobTitle}}
+</a></legend>
+<p>
+Number of Workers Needed: {{this.numberOfTrimmers}}
+</p>
+<p>
+Duration of Job: {{this.duration}}
+</p> 
+<p>
+Location: {{this.location}}
+</p>
+<p>
+Pay Rate: {{this.payRate}}
+</p>
+</fieldset>
 {{/each}}
 
 

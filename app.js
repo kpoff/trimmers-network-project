@@ -17,6 +17,7 @@ const bcrypt = require("bcryptjs");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const User = require('./models/User')
+hbs.registerPartials(__dirname + '/views/partials');
 
 mongoose.Promise = Promise;
 mongoose
@@ -32,6 +33,7 @@ const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
 
 hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
+
 
 const app          = express();
 
@@ -95,6 +97,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
 
 
 
